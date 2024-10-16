@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -8,22 +8,47 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
+    width: 100%;
+    box-sizing: border-box; /* Включити padding у ширину */
+}
+
+h1 {
+    font-size: 50px;
 }
 
 .header-left .search-icon {
     cursor: pointer;
+    color: #FFFFFF;
+    font-size: 35px;
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Дозволяє кнопкам переноситися на новий рядок */
 }
 
 .header-right .auth-button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 10px 15px; /* Зменшені відступи кнопки */
     cursor: pointer;
+    font-size: 1em; /* Зменшено розмір шрифту */
+    border-radius: 5px;
+    min-width: 90px; /* Мінімальна ширина кнопок */
+}
+
+.header-right .auth-button.login {
+    width: 90px; /* Ширина кнопки [Увійти] */
+}
+
+.header-right .auth-button.register {
+    width: 150px; /* Ширина кнопки [Зареєструватися] */
 }
 
 main {
@@ -40,10 +65,81 @@ main {
 
 .card {
     background-color: #fff;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    width: 360px;
+    height: 400px;
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    height: 50%; /* Висота для зображення (половина картки) */
+    background-size: cover; /* Зробити зображення адаптивним */
+    background-position: center; /* Центрування зображення */
+}
+
+.card.grammar .card-image {
+    background-image: url('images/grammar.jpg'); /* Змінено на локальний шлях */
+}
+
+.card.vocabulary .card-image {
+    background-image: url('images/vocabulary.jpg'); /* Змінено на локальний шлях */
+}
+
+.card.writing .card-image {
+    background-image: url('images/writing.jpg'); /* Змінено на локальний шлях */
+}
+
+.card h2 {
+    padding: 10px; /* Відступ для заголовка */
+}
+
+.grammar-lessons {
+    color: #1a8ec1;
+}
+
+.vocabulary-lessons {
+    color: #ff6699;
+}
+
+.writing-lessons {
+    color: #a84d98;
+}
+
+.welcome {
+    font-size: 32px;
+    color: #50AF31;
+    font-weight: bold;
+}
+
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right {
+        margin-top: 10px;
+        justify-content: center; /* Центрування кнопок */
+    }
+
+    main {
+        padding: 30px 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
 }
