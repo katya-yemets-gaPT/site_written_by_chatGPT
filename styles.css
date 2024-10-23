@@ -146,3 +146,68 @@ main {
 
 
 /* Спроба закомітити і запушити зміни з іншого термінала */
+
+/* Додавання стилів до сторінки реєстрації */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.registration-form label {
+    font-weight: bold;
+}
+
+.registration-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.registration-form .auth-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.registration-form .auth-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Додавання стилів до сторінки входу  */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form .auth-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-form .auth-button:hover {
+    background-color: #45a049;
+}

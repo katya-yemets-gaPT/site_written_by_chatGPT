@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua - Вхід</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <span class="search-icon">⌕</span>
+        </div>
+        <div class="header-right">
+            <button class="auth-button" onclick="window.location.href='index.html'">Головна</button>
+        </div>
+    </header>
+    <main>
+        <h1>Вхід</h1>
+        <form class="login-form">
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="auth-button">Увійти</button>
+        </form>
+    </main>
+</body>
+</html>
